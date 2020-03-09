@@ -1,0 +1,6 @@
+- name: Blog
+  link: /
+- name: About
+  link: https://evossolutions.com/about.html
+- name: Authors
+  link: /author.html
