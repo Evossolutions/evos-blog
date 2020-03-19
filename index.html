@@ -8,13 +8,17 @@ title: Blog
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
   </head>
-  <body>
-    <h1>Latest Posts</h1>
 
-    <div class="row">
-      <div class="col-md-8">
+    <body>
+      <center><h1>Latest Posts</h1></center>
+<div class="container-fluid">
+  <div class="row">
+
+      <div class="card-deck">
+
         {% for post in site.posts %}
-        <div class="card">
+         <div class="col-xs-12 col-md-6">
+         <div class="card">
           <a href="{{ post.url }}">
             <img src="{{post.thumbnail}}" class="card-img-top" alt="...">
           </a>
@@ -26,8 +30,15 @@ title: Blog
             <small class="text-muted">Last updated 3 mins ago</small>
           </div>
         </div>
-        {% endfor %}
       </div>
+        {% endfor %}
+
+
     </div>
+   </div>
+
+
+
   </body>
+
 </html>
