@@ -14,16 +14,16 @@ title: Blog
 <div class="container-fluid">
   <div class="row">
 
-      <div class="card-deck">
+    <div class="card-deck">
 
-        {% for post in site.posts %}
-         <div class="col-xs-12 col-md-6">
-         <div class="card">
-          <a href="{{ post.url }}">
-            <img src="{{post.thumbnail}}" class="card-img-top" alt="...">
+      {% for post in site.posts %}
+      <div class="col-xs-12 col-md-6">
+        <div class="card">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ site.baseurl }}{{post.thumbnail}}" class="card-img-top" alt="...">
           </a>
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+            <h5 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
             <p class="card-text">{{ post.excerpt }}</p>
           </div>
           <div class="card-footer">
@@ -31,11 +31,11 @@ title: Blog
           </div>
         </div>
       </div>
-        {% endfor %}
+      {% endfor %}
 
 
     </div>
-   </div>
+  </div>
 
 
 
